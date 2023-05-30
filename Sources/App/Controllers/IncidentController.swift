@@ -49,7 +49,7 @@ struct IncidentController: RouteCollection {
             let params = rpcReq.params
             
             guard let params = params,
-                  let imageFile = params["imageFile"].wrappedValue as? File,
+                  let imageFile = params["imageFile"] as? File,
                   let latitude = params["latitude"] as? Double,
                   let longitude = params["longitude"] as? Double,
                   let comment = params["comment"] as? String else {

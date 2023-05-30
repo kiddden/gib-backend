@@ -41,7 +41,7 @@ struct JSONAny: Codable {
             value = incident
         } else if let incidents = try? container.decode([Incident].self) {
             value = incidents
-        } else if let file = try? container.decode(ByteBuffer.self) {
+        } else if let file = try? container.decode(File.self) {
             value = file
         } else {
             throw DecodingError.typeMismatch(Any.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Failed to decode JSON value"))

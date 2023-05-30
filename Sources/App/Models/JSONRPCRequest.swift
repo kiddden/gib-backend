@@ -26,8 +26,8 @@ struct JSONRPCRequest: Codable {
         jsonrpc = try container.decode(String.self, forKey: .jsonrpc)
         method = try container.decodeIfPresent(String.self, forKey: .method)
         let tmpParams = try container.decodeIfPresent([String: JSONAny].self, forKey: .params)
-        params = try tmpParams?.mapValues {
-            try $0.getValue()
+        params = try tmpParams?.mapValues { param in
+            try param.getValue()
         }
         id = try container.decodeIfPresent(String.self, forKey: .id)
     }
