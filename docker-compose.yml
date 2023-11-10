@@ -16,6 +16,7 @@ version: '3.7'
 
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-debug}
+  DATABASE_URL=postgres://ykxtnlrdjtnsil:a9e617d7d190942b3cdd32a5ff841e9f870c4915a89fa8f576ab1571d2a98b57@ec2-52-5-167-89.compute-1.amazonaws.com:5432/d88uceache1fg
   DATABASE_HOST=localhost
   DATABASE_PORT=5432
   DATABASE_USERNAME=kazzer

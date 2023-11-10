@@ -72,6 +72,7 @@ USER vapor:vapor
 # Let Docker bind to port 8080
 EXPOSE 8080
 
+ENV DATABASE_URL=postgres://ykxtnlrdjtnsil:a9e617d7d190942b3cdd32a5ff841e9f870c4915a89fa8f576ab1571d2a98b57@ec2-52-5-167-89.compute-1.amazonaws.com:5432/d88uceache1fg
 ENV DATABASE_HOST=localhost
 ENV DATABASE_PORT=5432
 ENV DATABASE_USERNAME=kazzer
