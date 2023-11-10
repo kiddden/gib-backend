@@ -25,7 +25,7 @@ steps:
     args:
       - run
       - deploy
-      - swift-service
+      - gib-backend
       - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY_NAME}/${_SERVICE_NAME}:$SHORT_SHA
       - --port=8080
       - --region=${_REGION}
