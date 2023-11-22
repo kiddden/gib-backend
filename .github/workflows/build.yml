@@ -26,5 +26,5 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: user/repo:tag
+        tags: kiddden/gib-backend:latest
         platforms: linux/amd64
